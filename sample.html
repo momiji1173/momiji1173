@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+ <html>
+   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>学習</title>
+   </head>
+ </html> 
+ <!DOCTYPE html>
+ <p class="lead-form">ご注文はこちらから！！</p>
+ 
+<from action="confirm.php" method="post">
+ <form id="myForm">
+ <div class="item">
+    <label for="rendou">お名前:</label>
+    <input id="rendou" type="text" name="yourname" placeholder="山田太郎">
+ </div>
+
+ <div class="item">
+   <p>味</p>
+   <select name="source">
+     <option value="cheese">チーズ</option>
+     <option value="ponzu">ポン酢</option>
+     <option value="menntaiko">明太子</option>
+   </select>
+ </div>
+
+ <div class="item">
+ <p>個数</p>
+ <input id="one" type="radio" name="pieces" value="one"><label for="one">1人前</label>
+ <input id="two" type="radio" name="pieces" value="two"><label for="two">2人前</label>
+ <input id="three" type="radio" name="pieces" value="three"><label for="three">3人前</label>
+ </div>
+
+ <div class="item">
+ <p>ソース量</p>
+ <input id="normal" type="radio" name="quantity" value="normal"><label for="normal">普通</label>
+ <input id="more" type="radio" name="quantity" value="more"><label for="more">多め</label>
+ <input id="less" type="radio" name="quantity" value="less"><label for="less">少なめ</label>
+ </div>
+
+ <div class="item">
+ <p>追加のトッピング</p>
+ <input id="aonori" type="checkbox" name="topping" value="青のり"><label for="aonori">青のり</label> 
+ <input id="katuobushi" type="checkbox" name="topping" value="鰹節"><label for="katuobushi">鰹節</label>
+ <input id="mayone-zu" type="checkbox" name="topping" value="マヨネーズ"><label for="mayone-zu">マヨネーズ</label>
+ </div>
+
+ <div class="item">
+  <br><label for="num">個数:</label>
+  <input id="num" type="number" name="pieces">
+ </div>
+
+ <div class="item">
+  <br><label for="comment">その他の要望</label>
+  <br><textarea id="comment" name="comment"placeholder="その他要望があればご自由にご記入ください"></textarea>
+ </div>
+
+ <div class="btn-area">
+  <br><input type="button" value="注文を確定する">
+ </div>
+
+  <button type="button" onclick="resetForm()">注文内容を破棄</button>
+</form>
+
+ <script src="sample.js"></script>
+</from>
